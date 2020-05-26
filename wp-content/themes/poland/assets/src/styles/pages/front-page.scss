@@ -1,0 +1,468 @@
+.top-site{
+    background: url(/wp-content/themes/poland/images/top-site-bg.png) no-repeat top center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    transition: all 0.5s ease;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &-container{
+        position: relative;
+        z-index: 9;
+    }
+
+        .top-site__article{
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: column;
+            margin-bottom: 100px;
+
+            h1{       
+                margin: 0;  
+                text-align: right;      
+                font-size: 40px; 
+                margin-top: 100px;
+                strong{
+                    margin-right: 10px;
+                }
+
+                @media (min-width: $desktop) {
+                    font-size: 75px;
+                    margin-top: 0;
+                }
+            }
+
+            span{
+                text-align: right;
+                color: $white;
+                font-size: 22px;
+                font-family: 'Lato', sans-serif;
+            }
+            @media(min-width: $desktop) {
+                margin-bottom: 200px;
+            }
+        }
+
+        .top-site__links{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+
+            .top-site-link {
+                color: $white;
+                display: flex;
+                flex-direction: column;
+                font-size: 25px;
+                align-items: center;
+                margin: 25px 0;
+                transition: transform 0.3s ease;
+
+                strong{
+                    margin: 10px 0;
+                }
+
+                &:hover{
+                    transform: scale(1.1);
+                    transition: transform 0.3s ease;
+                }
+                @media(min-width: $desktop) {
+                    margin: 0;
+                 }
+                @media(min-width: $desktop) and (max-width: 1440px) {
+                   font-size: 18px;
+                }
+            }
+        }
+
+        &:after{
+            position: absolute;
+            background: rgba(0, 0, 0, 0.4);
+            content: "";
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 8;
+        }
+
+    @media(min-width: $desktop) {
+        margin-top: 60px;
+    }
+}
+.columbus-house{
+    background: url(/wp-content/themes/poland/images/middle-section-bg.jpg) no-repeat bottom center;
+    background-size: cover;
+    min-height: 100vh;
+    height: 750px;
+    padding-bottom: 100px;
+    background-position: 90% 50%;
+
+    .columbus-house-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+
+        .columbus-house__top{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 75px;
+    
+            h2{
+                color: $main-color;
+                margin-bottom: 20px;
+                font-size: 35px;
+
+                @media(min-width: $desktop) {
+
+                }
+            }
+    
+            span{
+                margin: 0 0 20px 0;
+            }
+    
+            .columbus-house-link{
+                padding: 15px 30px;
+                transition: background 0.3s ease;
+
+                &:hover{
+                    background: $main-hover;
+                    transition:background 0.3s ease;
+                }
+            }
+        }
+        .columbus-house__bottom{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            .columbus-house__bottom-text{
+                text-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+                color: $white;
+                font-family: 'Lato', sans-serif;
+                font-size: 22px;  
+                text-align: center;              
+                max-width: 40%;
+
+                @media(min-width: $desktop) {
+                    margin-right: 50px;
+                    text-align: initial;
+                }
+            }
+
+            .columbus-house__bottom-btn{
+                font-size: 18px;
+                font-family: 'Lato', sans-serif;
+                padding: 10px 0;
+                width: 200px;
+                background-color: $white;
+                cursor: pointer;   
+                transition: background-color 0.3s ease, color 0.3s ease;
+                margin-top: 30px;
+                
+                &:hover{
+                    background-color: $main-color;
+                    color: $white;
+                    transition: background-color 0.3s ease, color 0.3s ease;
+                }
+
+                @media(min-width: $desktop) {
+                    margin-top: 0;
+                }
+            }
+            @media(min-width: $desktop) {
+                flex-direction: row;
+            }
+        }
+    }   
+    &.columbus-house-hidden{
+        display: none;        
+    }
+    &.columbus-house-another-bg{
+        background: url(/wp-content/themes/poland/images/middle-section-bg-battery.jpg) no-repeat bottom center;
+        background-size: cover;
+        background-position: 90% 50%;
+    }
+}
+
+.grig-section{
+    margin-top: 50px;
+
+    .grig-section-container{
+
+        h3{
+            font-weight: 300;
+            color: #444;
+            text-transform: uppercase;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &:after{
+                content: "";
+                display: block;
+                margin-top: 50px;
+                width: 40px;
+                height: 1px;
+                border-radius: 2px;
+                background-color: $main-color;
+            }
+        }
+        .grid-section-middle{
+            margin-top: 60px;
+            display: grid;
+            grid-template-areas:
+               "left "
+                "right"
+                 "bottom";
+            grid-template-columns: 100%;
+            grid-gap: 20px;
+            
+
+            .grid-section-middle-link{                                                                    
+                display: flex;
+                flex-direction: column;
+                height: 280px;
+                justify-content: flex-end;
+                transition: box-shadow 0.3s ease;
+                position: relative;
+
+                img{
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                    object-fit: cover;
+                    height: 100%;
+                    z-index: -1;
+                    width: 100%;
+                }
+
+                .middle-link-bottom{
+                    padding: 0 0 10px 20px;
+
+                    .middle-link-bottom-span{
+                        background: linear-gradient(90deg,rgba(241,145,33,1) 0%,rgba(225,130,66,1) 19%,rgba(175,97,156,1) 50%,rgba(71,51,71,1) 85%,rgba(29,31,69,1) 100%);
+                        height: 50px;
+                        width: 50px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 25px;
+                    }
+
+                    h4{
+                        font-size: 18px;
+                        color: $white;;
+                        margin: 15px 0;
+                    }
+                }
+            
+
+                &:first-child{
+                    grid-area: left;                    
+
+                    @media(min-width: $desktop) {
+                        height: 550px;
+                    }
+                }
+                &:nth-child(2){
+                    grid-area: right;
+                }
+                &:last-child{
+                    grid-area: bottom;
+                }
+
+                &:hover{
+                    box-shadow: 0px 0px 27px -4px #000000;
+                    transition: box-shadow 0.3s ease;
+                }
+
+                @media(min-width: $desktop) {
+                    height: auto;
+                }
+            }
+            @media (min-width: $desktop) {
+                grid-template-areas:
+                "left right"
+                 "left bottom";
+                 grid-template-columns: 66% 33%;
+                 grid-gap: 10px;
+            }
+        }
+        .grid-section-link{
+            border: 2px solid $main-color;
+            width: 70%;
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;          
+            margin: 50px auto 0;
+            border-radius: 20px;
+            transition: box-shadow 0.3s ease;
+
+            &:hover{
+                box-shadow: 0px 0px 27px -4px #000000;
+                transition: box-shadow 0.3s ease;
+            }
+
+            @media(min-width: $desktop) {
+                width: 30%;
+            }
+        }
+    }
+}
+
+.form-section{
+    background: url(/wp-content/themes/poland/images/form-bg.jpg) no-repeat top center;
+    background-size: cover;
+    height: 100vh;
+    margin-top: 100px;
+    background-attachment: fixed;
+
+    .form-section-container{
+        padding-top: 40px;
+
+        .form-section-top{
+
+            h2{
+                color: $main-color;
+                font-size: 34px;
+                text-align: center;
+                font-family: 'Montserrat',sans-serif;
+                margin: 0px;
+                font-weight: 600;
+
+                @media(min-width: $desktop) {
+                    font-size: 42px;
+                }
+            }
+    
+            h4{
+                text-align: center;
+                font-family: 'Montserrat',sans-serif;      
+                color: $main-color;
+                font-size: 24px;     
+                margin: 20px auto;
+                font-weight: 600;             
+
+                @media(min-width: $desktop) {
+                    max-width: 40%;
+                    font-size: 30px; 
+                }
+            }
+
+        }
+
+        .form-block{
+            background-color: $white;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 50px;
+
+            .form-group{
+
+                input{
+                    border-bottom: 1px solid #1a4782;
+                }
+            }
+
+            .form-row{
+                display: flex;
+
+                .form-group{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center; 
+
+                    input{
+                        width: 100%;  
+                        background-color: transparent;
+                        border-radius: 0;
+                        margin: 0;       
+                        height: 50px;                                     
+                    }
+                }
+            }
+        }
+    }
+}
+
+.search-section{
+    background: #f7f7f7;
+    padding: 50px 0;
+    display: none;
+
+    .search-section-container{
+        display: flex;
+        align-items: center;
+
+        h4{
+            margin: 0;
+            color: #7a7a7a;
+            font-size: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        p{
+            font-size: 1rem;
+            color: #7a7a7a;
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            text-align: center;
+            display: block;
+        }
+
+        .search-section-form{
+            position: relative;
+
+            input{
+                border: none;
+                margin: 0;               
+                padding: 10px 70px 10px 20px;    
+                background-color: $white;    
+                border-radius: 30px;    
+            }
+
+            button{
+                display: block;
+                width: 30px;
+                height: 30px;
+                border-radius: 15px;
+                background-color: $main-color;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                cursor: pointer;
+                transition: 0.3s box-shadow ease;
+
+                &:after{
+                    content: "";
+                    background: url(/wp-content/themes/poland/images/pen.svg) no-repeat top center;
+                    height: 15px;
+                    width: 15px;   
+                    display: block;   
+                    margin-left: 1px;             
+                }
+
+                &:hover{
+                    box-shadow: 0px 0px 15px -4px #000000;
+                    transition: 0.3s box-shadow ease;
+                }
+            }
+        }
+    }
+    @media (min-width: $desktop) {
+        display: block;
+    }
+}
