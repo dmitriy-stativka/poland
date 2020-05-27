@@ -58,14 +58,38 @@
 					<span></span>
 				</button>	
 				<div class="header-bottom__center animate__animated">
-					<ul class="nav-bar">
+					<!-- <ul class="nav-bar">
 						<li><a href="#">Dla domu</a></li>
 						<li><a href="#">Dla biznesu</a></li>
 						<li><a href="#">Dla Rolnika</a></li>
 						<li><a href="#">Farmy PV</a></li>
 						<li><a href="#">FAQ</a></li>
 						<li><a href="#">Kontakt</a></li>
-					</ul>
+					</ul> -->
+
+
+					<?php 
+						wp_nav_menu( [
+							'theme_location'  => '',
+							'menu'            => '', 
+							'container'       => 'ul', 
+							'container_class' => '', 
+							'container_id'    => '',
+							'menu_class'      => 'nav-bar', 
+							'menu_id'         => '',
+							'echo'            => true,
+							'fallback_cb'     => 'wp_page_menu',
+							'before'          => '',
+							'after'           => '',
+							'link_before'     => '',
+							'link_after'      => '',
+							'depth'           => 0,
+							'walker'          => '',
+						] );
+					?>
+
+
+
 					<a class="blue-btn header-phone" href="#">
 						<svg class="icon"><use xlink:href="#sun"/></svg>
 						<span>INFOLINIA:</span>
