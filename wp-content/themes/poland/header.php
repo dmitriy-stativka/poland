@@ -17,13 +17,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+
 	<link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>	
 
 	<link
         rel="stylesheet"
         href="/wp-content/themes/poland/styles/styles.min.css"
-      />
+	  />
+	  
 
 	<?php wp_head(); ?>
 </head>
@@ -91,7 +94,7 @@
 
 
 					<a class="blue-btn header-phone" href="#">
-						<svg class="icon"><use xlink:href="#sun"/></svg>
+						<svg class="icon"><use xlink:href="#phone"/></svg>
 						<span>INFOLINIA:</span>
 						<span class="header-number">+48 12 307 30 96</span>
 					</a>

@@ -164,7 +164,55 @@ input {
   fill: $white;
 }
 
+.icon-big {
+  max-width: 120px;
+  fill: $main-color;
+}
+
+.span-blue{
+  color: $main-color;
+}
+
 .blue-btn{
   background-color:$main-color;
   color: $white;
+  padding: 10px 20px;
+}
+
+.title-with-line{
+  color: #4a4a4a;
+  font-weight: 200;
+  letter-spacing: 2px;
+  font-size: 26px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 60px;
+
+  &:after{
+    content: "";
+    display: block;
+    margin: 20px auto 0;
+    width: 40px;
+    height: 1px;
+    border-radius: 2px;
+    background-color: #4152a0;
+  }
+}
+
+.blue-long-btn{
+    border: 2px solid #4152a0;   
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px auto 0;
+    border-radius: 20px;
+    transition: box-shadow 0.3s ease;
+    max-width: 420px;
+    text-align: center;
+
+    &:hover{
+      box-shadow: 0px 0px 27px -4px #000000;
+      transition: box-shadow 0.3s ease;
+  }
 }

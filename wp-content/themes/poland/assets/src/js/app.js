@@ -2,6 +2,11 @@
 
 $(document).ready(function () {
 
+  $('.single-item').slick({
+    infinite: true,
+    arrows: true
+  });
+
   $(window).resize(function () {
     if($(window).width() >= 1023){
       $( ".header-bottom__center" ).removeClass( "animate__fadeOutUpBig" );     
@@ -12,18 +17,15 @@ $(document).ready(function () {
 
   // Header-top dissapears during scrolling
   const headerTop = document.querySelector('.header-top');
- 
-  const topSite = document.querySelector(".top-site");
+  
   let hidden = false;
   window.addEventListener("scroll",()=> {
-      if(window.scrollY > 0 && !hidden) {
-          topSite.classList.add("top-site__margin");
+      if(window.scrollY > 0 && !hidden) {        
           headerTop.classList.add('hidden');
                  
           hidden = true
           $(".logo").animate({'top' : '0'});
-      } else if(window.scrollY === 0 && hidden) {
-          topSite.classList.remove("top-site__margin");
+      } else if(window.scrollY === 0 && hidden) {     
           headerTop.classList.remove('hidden');
              
           hidden = false

@@ -1,0 +1,490 @@
+.dla-domu-top{
+    background: url(/wp-content/themes/poland/images/dla-domu-bg.jpg) no-repeat top center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;    
+    margin-top: 100px;
+    display: flex;
+    position: relative;
+
+    .dla-domu-container{
+        position: relative;
+        z-index: 9;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h1{
+            margin-bottom: 0;
+            font-size: 40px;
+
+            @media (min-width: $desktop) {
+                font-size: 75px;
+            }
+        }
+
+        h4{
+            margin-bottom: 150px;
+            font-weight: 500;
+            color: $white;
+            font-size: 26px;
+        }
+    }
+
+    &:after{
+        position: absolute;
+        background: rgba(0, 0, 0, 0.4);
+        content: "";
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 8;
+    }
+
+    @media (min-width: $desktop) {
+        margin-top: 60px;
+    }
+}
+
+.dla-domu-advantages{
+    background-color: #f9f9f9;
+    padding: 50px 0;
+
+    .dla-domu-advantages-container{
+
+        .dla-domu-advantages-title{
+            color: $main-color;
+            text-align: center;  
+            letter-spacing: 3px;       
+
+            &:after{
+                content: "";
+                display: block;
+                margin: 20px auto 0;
+                width: 40px;
+                height: 1px;
+                border-radius: 2px;
+                background-color: #4152a0;
+            }
+        }
+        .dla-domu-advantages-middle{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            .advantages-middle-block{
+                background-color: $white;
+                padding: 20px 50px;
+                max-width: 100%;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .advantages-middle-block-top{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    img{
+                        max-width: 200px;                                 
+
+                        @media(min-width: $desktop) {
+                            margin-right: 20px;
+                        }  
+                    }
+
+                    .advantage-title{
+                        text-transform: capitalize;
+                        font-size: 50px;
+                        font-family: 'Lato',sans-serif;
+                        font-weight: 900;
+                        
+                        &.advantage-blue{
+                            color: $main-color;
+                        }
+
+                        &.advantage-green{
+                            color: #78cbc3;
+                        }
+                    }              
+                    @media(min-width: $desktop) {
+                        flex-direction: row;
+                    }     
+                }
+                .advantages-middle-block-text{
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 20px;
+                    line-height: 30px;
+                    color: $main-color;               
+
+                    strong{
+                        margin: 20px 0 0 0;
+                    }
+                }
+
+                .advantages-middle-block-list{
+                    margin-top: 50px;
+                    color: $main-color;
+
+                    li{
+                        margin: 5px 0;                        
+                        display: flex;
+                        position: relative;
+                        padding-left: 40px;
+
+                        &:before{
+                            content: "";
+                            background: url(/wp-content/themes/poland/images/tick.svg) no-repeat top center;
+                            height: 25px;
+                            width: 25px;
+                            position: absolute;
+                            left: 0;
+                            top: 2px;                        
+                        }
+                    }
+                }
+                @media(min-width: $desktop) {
+                    max-width: 49%;
+                }
+            }
+        }
+        .advantages-btn{            
+            display: block;
+            margin: 40px auto 0;
+            max-width: 200px;
+            width: 100%;
+            text-align: center;
+            transition: background-color 0.3s ease;
+
+            &:hover{
+                background-color: $main-hover;
+                transition: background-color 0.3s ease;
+            }
+        }
+    }
+}
+
+.guarantee{
+    padding: 50px 0;
+
+    .guarantee-title{
+        color: #4a4a4a;
+        font-weight: 200;
+        letter-spacing: 2px;
+        font-size: 26px;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 60px;
+
+        &:after{
+            content: "";
+            display: block;
+            margin: 20px auto 0;
+            width: 40px;
+            height: 1px;
+            border-radius: 2px;
+            background-color: #4152a0;
+        }
+    }
+
+    .guarantee-middle{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .guarantee-middle-block{
+            background: linear-gradient(to bottom,#fff 0%,#ececec 100%);
+            box-shadow: 0px 3px 3px 0px rgba(0,0,0,.16);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 60px 10px;
+            margin-top: 30px;
+            width: 100%;
+            transition: transform 0.3s ease;
+
+            .icon{
+                fill: $main-color;
+                width: 125px;
+                height: 125px;
+                margin-bottom: 30px;
+            }
+
+            .guarantee-span{
+                font-family: 'Montserrat',sans-serif;
+                font-size: 14px;
+                font-weight: 700;
+                color: #4a4a4a;
+                text-transform: uppercase;
+                letter-spacing: 1.4px;
+
+                &.span-blue{
+                    color: $main-color;
+                }
+            }
+
+            .guarantee-middle-block-text{
+                font-size: 14px;
+                font-family: 'Montserrat',sans-serif;
+                font-weight: 500;
+                text-align: center;
+                color: #7a7a7a;
+                margin-top: 30px;
+            }
+
+            .guarantee-middle-block-link{
+                margin-top: 30px;
+            }
+
+            &:hover{
+                transform: scale(1.02);
+                transition: transform 0.3s ease;
+            }
+
+            @media (min-width: $tablet) {
+                max-width: 49%;
+                width: 100%;
+            }
+            @media (min-width: $desktop) {
+                max-width: 24%;
+                width: 100%;
+                margin-top: 0;
+            }
+        }
+    }
+    .guarantee-link{
+        border: 2px solid $main-color;
+        width: 70%;
+        color: $main-color;
+        padding: 10px 0;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;          
+        margin: 50px auto 0;
+        border-radius: 20px;
+        transition: box-shadow 0.3s ease;
+
+        &:hover{
+            box-shadow: 0px 0px 27px -4px #000000;
+            transition: box-shadow 0.3s ease;
+        }
+
+        @media(min-width: $desktop) {
+            width: 30%;
+        }
+    }
+}
+
+.columbus-only{
+    background: url(/wp-content/themes/poland/images/only-bg.jpg) no-repeat bottom center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;      
+    display: flex;
+    position: relative;    
+    align-items: center;
+
+    .columbus-only-container{
+        position:relative;
+        z-index: 9;        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        justify-content: center; 
+        
+        h3{
+            font-family: 'Montserrat',sans-serif;
+            font-weight: 700;
+            font-size: 24px;
+            color: $white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+                &:after{
+                content: "";
+                display: block;
+                margin: 20px 0 0;
+                width: 40px;
+                height: 1px;
+                border-radius: 2px;
+                background-color: $white;
+            }
+        }
+
+        h4{
+            font-family: 'Montserrat',sans-serif;
+            font-weight: 800;
+            font-size: 36px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            color: #fff;
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        p{
+            text-transform: lowercase;
+            color: #fff;
+            font-family: 'Montserrat',sans-serif;
+            font-weight: 200;
+            font-size: 22px;
+            text-align: center;
+        }
+
+        a{
+            background-color: $white;
+            margin: 15px auto 0;
+            text-align: center;           
+            padding: 10px 30px;
+            border-radius: 25px;
+            border: 2px solid transparent;
+            transition: 0.3s ease;
+
+            &:hover{
+                border: 2px solid $white;
+                background-color: transparent;
+                color: $white;
+                transition: 0.3s ease;
+            }
+        }          
+    }
+
+    &:after{
+        position: absolute;
+        background: rgba(0, 0, 0, 0.4);
+        content: "";
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 8;
+    }
+}
+
+.dla-domu-grid{
+    padding: 50px 0 100px;
+
+    h3{
+        font-weight: 300;
+        color: #444;
+        text-transform: uppercase;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &:after{
+            content: "";
+            display: block;
+            margin: 20px 0 20px;
+            width: 40px;
+            height: 1px;
+            border-radius: 2px;
+            background-color: $main-color;
+        }
+    }
+
+    .dla-domu-grid-middle{
+        display: grid;     
+        grid-template-areas:
+        "left "
+         "right"
+          "bottom";
+        grid-template-columns: 100%;
+         grid-gap: 20px;
+
+        img{           
+            object-fit: cover;
+            width: 100%;
+
+            &:first-child{
+                grid-area: left;                 
+                
+                @media (min-width: $desktop) {
+                    height: 100%;
+                }
+            }
+
+            &:nth-child(2) {
+                grid-area: right;
+            }
+
+            &:last-child{
+                grid-area: bottom;
+            }         
+        }
+        @media(min-width: $desktop) {
+            grid-template-areas:
+            "left right"
+            "left bottom";
+            grid-template-columns: 66% 33%;
+            grid-gap: 10px;
+        }
+    }
+}
+
+.dla-domu-bottom{
+    background: url(/wp-content/themes/poland/images/dla-domu-bottom-bg.jpg) no-repeat top center;
+    background-size: cover;
+    background-position: center 40%;
+    background-attachment: fixed;
+    min-height: 500px;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .dla-domu-bottom-container{
+        position: relative;
+        z-index: 9;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        .dla-domu-bottom-title{
+            font-weight: 300;
+            letter-spacing: 2px;
+            font-size: 24px;
+            text-transform: uppercase;
+            color: #fff;
+            font-family: 'Montserrat',sans-serif;
+        }
+
+        .dla-domu-bottom-link{
+            border: 2px solid #fff;
+            background: #fff;
+            color: $main-color;
+            border-radius: 20px;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: 700;
+            padding: 10px 30px;   
+            margin-top: 30px;   
+            
+            &:hover{
+                border: 2px solid $white;
+                background-color: transparent;
+                color: $white;
+                transition: 0.3s ease;
+            }
+        }
+    }
+
+    &:after{
+        position: absolute;
+        background: rgba(0, 0, 0, 0.4);
+        content: "";
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 8;
+    }
+}

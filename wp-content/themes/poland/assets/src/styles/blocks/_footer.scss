@@ -27,10 +27,6 @@
                 padding-bottom: 40px;
                 text-align: center;
 
-                &:hover{
-                    color: $main-color;
-                }
-
                 @media(min-width: $desktop) {
                     text-align: initial;
                     margin: 0 0 60px 0;
@@ -47,14 +43,11 @@
                     a{
                         color: #ececec;
                         display: inline-block;
-                    }
 
-                    &:hover{
-
-                        a{
-                            color: $main-color;
+                        &:hover{                          
+                            color: $main-color;                            
                         }
-                    }
+                    }                   
                 }
                 @media(min-width: $desktop) {
                     text-align: initial;

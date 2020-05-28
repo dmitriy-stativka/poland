@@ -448,11 +448,12 @@
 
                 &:after{
                     content: "";
-                    background: url(/wp-content/themes/poland/images/pen.svg) no-repeat top center;
-                    height: 15px;
+                    background: url(/wp-content/themes/poland/images/next.svg) no-repeat top center;
+                    background-size: cover;
+                    height: 15px;                    
                     width: 15px;   
                     display: block;   
-                    margin-left: 1px;             
+                    margin-left: 2px;             
                 }
 
                 &:hover{

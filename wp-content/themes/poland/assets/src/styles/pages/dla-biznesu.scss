@@ -1,0 +1,239 @@
+.biznes-top{
+    background: url(/wp-content/themes/poland/images/biznes-bg.jpg) no-repeat center center;
+    background-size: cover;
+    min-height: 700px;
+    background-attachment: fixed;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .biznes-top-container{
+        position: relative;
+        z-index: 9;
+
+        h2{
+            font-weight: 200;
+            color: #fff;
+            font-size: 60px;
+            margin: 0;
+            padding: 20px 20px;
+            background-color: rgba(65,82,160, 0.8);            
+            font-family: 'Montserrat',sans-serif;
+            display: inline;
+        }
+    }
+      
+    &:after{
+        position: absolute;
+        background: rgba(0, 0, 0, 0.4);
+        content: "";
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 8;
+    }
+}
+
+.biznes-second{
+    background: url(/wp-content/themes/poland/images/biznes-bg-2.jpg) no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    clip-path: polygon(50% 0%,100% 100px,100% 100%,50% 100%,0 100%,0 100px);
+    position: relative;
+    z-index: 9;
+    margin-top: -100px;
+    padding-top: 100px;
+
+    .biznes-second-container{
+        height: 100%;
+
+        h3{
+            margin: 0;
+        }
+
+        .biznes-second-middle-block{
+            margin-top: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            p{
+                font-family: 'Montserrat',sans-serif;
+                font-size: 16px;
+                font-weight: 700;
+                color: #4a4a4a;
+                letter-spacing: 1.46px;
+                text-align: center;
+            }
+
+            a{
+                background: $main-color;
+                color: $white;
+            }
+        }
+    }
+}
+
+.biznes-icons{
+    background: url(/wp-content/themes/poland/images/biznes-bg-3.jpg) no-repeat center center;
+    background-size: cover;   
+    background-attachment: fixed;
+    clip-path: polygon(50% 0%,100% 100px,100% 100%,50% 100%,0 100%,0 100px);
+    position: relative;
+    z-index: 9;
+    padding-bottom: 200px;
+    margin-top: -100px;
+    padding-top: 100px;
+
+    h3{
+        color: $white;
+    }
+
+    .biznes-icons-middle{
+        display: flex;
+        justify-content: space-between;
+
+        .biznes-icons-middle__block{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+
+            svg{
+
+            }
+
+            h4{
+                color: $white;
+                font-family: 'Montserrat',sans-serif;
+                font-weight: 700;
+                font-size: 16px;                
+                letter-spacing: 1.46px;
+                text-align: center;
+                text-transform: uppercase;
+            }
+
+            span{
+                color: $white;
+                font-size: 14px;              
+                letter-spacing: 1.2px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.biznes-tabs{
+    clip-path: polygon(50% 0%,100% 100px,100% 100%,50% 100%,0 100%,0 100px);
+    position: relative;
+    background-color: $white;
+    z-index: 9;
+    padding-bottom: 50px;
+    margin-top: -100px;
+    padding-top: 100px;
+
+    .biznes-tabs-middle{
+        display: flex;
+
+        .biznes-tabs-left{
+            max-width: 40%;
+            width: 100%;
+            position: relative;     
+            // tabs
+            .tabbed {   
+                margin-top: 100px;                           
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                input{
+                    display: none;
+                }
+
+                label{
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 25px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;                    
+                    margin-right: 15px;
+                    cursor: pointer;
+                    transition: background-color .3s;
+                    border: 2px solid $main-color;    
+                    font-family: 'Montserrat',sans-serif;
+                    font-weight: 700;
+                    font-size: 14px;    
+
+                    &:hover{
+                        color: $main-color;
+                    }
+                }
+            }           
+
+            .tabbed > input:checked + label {
+                background: $main-color;
+                color: $white;
+            }
+            
+            .tabs {                                
+                width: 100%;
+                perspective: 600px;
+                margin-top: 20px;
+
+                div{
+                    position: absolute;             
+                    padding: 10px 30px 40px;
+                    line-height: 1.4em;
+                    opacity: 0;
+                    transform: rotateX(-20deg);
+                    transform-origin: top center;
+                    transition: opacity .3s, transform 1s;
+                    z-index: 0;
+                }
+            }
+                        
+            #tab-nav-1:checked ~ .tabs > div:nth-of-type(1),
+            #tab-nav-2:checked ~ .tabs > div:nth-of-type(2),
+            #tab-nav-3:checked ~ .tabs > div:nth-of-type(3),
+            #tab-nav-4:checked ~ .tabs > div:nth-of-type(4){
+                transform: rotateX(0);
+                opacity: 1;
+                z-index: 1;
+            }           
+            // end of tabs
+        }
+        .biznes-tabs-right{
+            max-width: 60%;
+            width: 100%;
+        }
+    }
+}
+
+.whole-slider{
+    max-width: 100%;
+
+    .single-item{
+        max-height: 750px;
+        height: 100%;      
+        clip-path: polygon(50% 3%,100% 100px,100% 100%,50% calc(100% - 100px),0 100%,0 100px);
+        overflow: hidden;
+        position: relative;
+
+        .holder{
+            height: 100%;            
+            color:#fff;
+            text-align:center;            
+
+            img{
+                max-width: 100%;
+                max-height: 750px;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;                
+            }
+          }
+    }    
+}
