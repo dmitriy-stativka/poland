@@ -4,7 +4,9 @@ $(document).ready(function () {
 
   $('.single-item').slick({
     infinite: true,
-    arrows: true
+    arrows: true,
+    nextArrow: '<div class="arrow-next-cont">  <svg class="icon"><use xlink:href="#arrow-next" /></svg> </div>',
+    prevArrow: '<div class="arrow-prev-cont">  <svg class="icon"><use xlink:href="#arrow-prev" /></svg> </div>',
   });
 
   $(window).resize(function () {
