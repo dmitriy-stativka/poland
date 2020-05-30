@@ -106,29 +106,35 @@ get_header();?>
                 <div class="tabs">
                     <input type="radio" name="timeline" id="timeline1" checked >
                     <label for="timeline1">
-                        <span>UMOWA </span>
+                        <span class="tabs-span tabs-span-text">UMOWA</span>
+                        <span class="tabs-span tabs-span-number">1</span>
                     </label>
                     <input type="radio" name="timeline" id="timeline2">
                     <label for="timeline2">
-                        <span>OFERTA FINANSOWANIA </span>
+                        <span class="tabs-span tabs-span-text">OFERTA FINANSOWANIA </span>
+                        <span class="tabs-span tabs-span-number">2</span>
                     </label>
                     <input type="radio" name="timeline" id="timeline3">
                     <label for="timeline3">
-                        <span>WIZJA LOKALNA </span>
+                        <span class="tabs-span tabs-span-text">WIZJA LOKALNA </span>
+                        <span class="tabs-span tabs-span-number">3</span>
                     </label>
                     <input type="radio" name="timeline" id="timeline4">
                     <label for="timeline4">
-                       <span>PROJEKT </span>
+                       <span class="tabs-span tabs-span-text">PROJEKT </span>
+                       <span class="tabs-span tabs-span-number">4</span>
                     </label>
 
                     <input type="radio" name="timeline" id="timeline5">
                     <label for="timeline5">
-                       <span>INSTALACJA i ODBIÓR </span>
+                       <span class="tabs-span tabs-span-text">INSTALACJA i ODBIÓR </span>
+                       <span class="tabs-span tabs-span-number">5</span>
                     </label>
 
                     <input type="radio" name="timeline" id="timeline6">
                     <label for="timeline6">
-                    <span>SATYSFAKCJA I UŻYTKOWANIE</span>
+                    <span class="tabs-span tabs-span-text">SATYSFAKCJA I UŻYTKOWANIE</span>
+                    <span class="tabs-span tabs-span-number">6</span>
                     </label>
                     <div id="tab__content--1" class="tab__content">
                         <img src="/wp-content/themes/poland/images/logo.svg" alt="">

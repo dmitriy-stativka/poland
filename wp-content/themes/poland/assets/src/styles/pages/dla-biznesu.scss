@@ -14,12 +14,18 @@
         h2{
             font-weight: 200;
             color: #fff;
-            font-size: 60px;
+            font-size: 36px;
             margin: 0;
-            padding: 20px 20px;
-            background-color: rgba(65,82,160, 0.8);            
             font-family: 'Montserrat',sans-serif;
-            display: inline;
+            display: block;
+            text-align: center;
+
+            @media (min-width: $desktop) {
+                display: inline;
+                background-color: rgba(65,82,160, 0.8);  
+                padding: 20px 20px;
+                font-size: 44px;
+            }
         }
     }
       
@@ -94,6 +100,7 @@
     .biznes-icons-middle{
         display: flex;
         justify-content: space-between;
+        flex-direction: column;
 
         .biznes-icons-middle__block{
             display: flex;
@@ -122,6 +129,9 @@
                 text-align: center;
             }
         }
+        @media(min-width: $desktop) {
+            flex-direction: row;
+        }
     }
 }
 
@@ -136,14 +146,15 @@
 
     .biznes-tabs-middle{
         display: flex;
+        flex-direction: column;
+        align-items: center;
 
         .biznes-tabs-left{
-            max-width: 40%;
+            max-width: 100%;
             width: 100%;
             position: relative;     
             // tabs
-            .tabbed {   
-                margin-top: 100px;                           
+            .tabbed {                                            
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
@@ -171,6 +182,10 @@
                         color: $main-color;
                     }
                 }
+
+                @media(min-width: $desktop) {
+                    margin-top: 100px;
+                }
             }           
 
             .tabbed > input:checked + label {
@@ -183,15 +198,12 @@
                 perspective: 600px;
                 margin-top: 20px;
 
-                div{
-                    position: absolute;             
+                div{           
                     padding: 10px 30px 40px;
                     line-height: 1.4em;
-                    opacity: 0;
-                    transform: rotateX(-20deg);
-                    transform-origin: top center;
-                    transition: opacity .3s, transform 1s;
                     z-index: 0;
+                    display: none;     
+                    text-align: center;              
                 }
             }
                         
@@ -199,15 +211,26 @@
             #tab-nav-2:checked ~ .tabs > div:nth-of-type(2),
             #tab-nav-3:checked ~ .tabs > div:nth-of-type(3),
             #tab-nav-4:checked ~ .tabs > div:nth-of-type(4){
-                transform: rotateX(0);
-                opacity: 1;
-                z-index: 1;
+                display: block;
             }           
             // end of tabs
+
+            @media(min-width: $desktop) {
+                max-width: 40%;
+            }
         }
         .biznes-tabs-right{
-            max-width: 60%;
+            max-width: 100%;
             width: 100%;
+
+            @media(min-width: $desktop) {
+                max-width: 60%;
+            }
+        }
+
+        @media (min-width: $desktop) {
+            flex-direction: row;
+            align-items: initial;
         }
     }
 }
@@ -215,6 +238,7 @@
 .whole-slider{
     max-width: 100%;
     position: relative;
+    display: none;
 
     .whole-slider-title{
         position: absolute;
@@ -270,7 +294,10 @@
                 object-fit: cover;                                            
             }
         }
-    }    
+    }  
+    @media (min-width: $desktop) {
+        display: block;
+    }  
 }
 
 .biznes-timeline{
@@ -285,6 +312,11 @@
         justify-content: space-around;
         border-top: 1px solid #c5c5c5;
         position: relative;
+        flex-wrap: wrap;
+
+        @media(min-width: $desktop) {
+            flex-wrap: initial;
+        }
     }
     
     .tabs input[type=radio] {
@@ -330,37 +362,62 @@
         }
     }
     
-    .tabs label span {
-        display: none;
+    .tabs label .tabs-span {       
         font-size: 14px;
         margin-top: 30px;
         white-space: nowrap;
         transition: color 0.3s ease;
+    }
+
+    .tabs label .tabs-span-text {
+        display: none;
+
+        @media (min-width: $desktop) {
+            display: block;
+        }
+    }
+
+    .tabs label .tabs-span-number {
+        display: block;
+
+        @media (min-width: $desktop) {
+            display: none;
+        }
     }
     
   
     
     .tab__content {
         display: none;
-         text-align: center;
-         position: absolute;
-         top: 150px;
-         left: 0;
-         right: 0;        
-         margin: 0 auto;
+        text-align: center;
+        margin-top: 60px;
         box-sizing: border-box;
-        background-color:#ffffff;    
+        background-color:#ffffff;   
+        width: 100%; 
         
         img{
             max-width: 25%;
             max-height: 100px;
             width: 100%;
+            margin-bottom: 30px;
+
+            @media(min-width: $desktop) {
+                margin-bottom: 0;
+            }
         }
 
         p{
             margin: 0;
             display: flex;
             align-items: center;
+        }
+
+        @media(min-width: $desktop) {
+            position: absolute;
+            top: 150px;
+            left: 0;
+            right: 0; 
+            margin: 0 auto;      
         }
     }
     
@@ -388,7 +445,7 @@
         background: $main-color;       
     }
 
-    .tabs [id^="timeline"]:checked + label span {
+    .tabs [id^="timeline"]:checked + label .tabs-span {
         color: $main-color;    
     }
     
@@ -400,11 +457,11 @@
     #timeline6:checked ~ #tab__content--6{
         display: flex;
         justify-content: space-between;
-    }
-    
-    @media (min-width: 768px) {
-        .tabs label span {
-            display: block;
+        flex-direction: column;
+        align-items: center;    
+        
+        @media(min-width: $desktop) {
+            flex-direction: row;
         }
     }
     // end of tabs
@@ -428,18 +485,24 @@
         h2{
             text-align: center;
             color: $white;
-            max-width: 60%;
+            max-width: 100%;
+            font-size: 30px;
             margin: 30px auto;
             text-transform: uppercase;
             font-family: 'Montserrat',sans-serif;
             font-weight: 300;
+
+            @media( min-width: $desktop) {
+                max-width: 60%;
+                font-size: 44px;
+            }
         }
 
         a{
             background-color: $white;
             border: none;
             transition: color 0.3s ease, background-color 0.3s ease;
-            
+
             &:hover{
                 color: $white;
                 background-color: $main-color;
