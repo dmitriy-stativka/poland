@@ -1,0 +1,216 @@
+
+.faq-top{
+	background: url(/wp-content/themes/poland/images/faq-top-bg.jpg) no-repeat top center;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.faq-tabs{
+	clip-path: polygon(50% 0%,100% 100px,100% 100%,50% 100%,0 100%,0 100px);
+	margin-top: -100px;
+	padding-top: 100px;
+	position: relative;
+	z-index: 9;
+	background: $white;
+	padding-bottom: 150px;
+
+.cmp-flex-tabs {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+	input[data-flex-tab] {
+		display: none;
+		visibility: hidden;
+	}
+
+	.cmp-flex-tabs__tab {
+		width: 100%;
+		cursor: pointer;
+		background: #ececec;
+		background-image: linear-gradient(0deg,rgba(255,255,255,0) 0%,#fff 100%);
+		box-shadow: 0 1px 2px 0 rgba(0,0,0,.5);
+		height: 150px;
+		display: flex;
+		transition: transform 0.3s ease, background 0.3s ease;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+
+		.tabs__tab-wrapper{
+			background: $main-color;
+			display: flex;
+			width: 50px;
+			border-radius: 25px;
+			align-items: center;
+			justify-content: center;
+			max-height: 50px;
+			height: 100%;
+			transition: background 0.3s ease;
+
+			.icon-tabs{
+				fill: $white;
+				transition: fill 0.3s ease;
+			}
+		}
+
+		h3{
+			font-size: 14px;
+			margin-top: 20px;
+			font-weight: 700;
+			color: $main-color;
+			letter-spacing: .91px;
+			text-align: center;
+			text-transform: uppercase;
+			transition: color 0.3s ease;
+		}
+
+		&:hover{
+			transform: scale(1.03);
+			transition: transform 0.3s ease;
+		}
+	}
+
+	@media (min-width: $desktop) {
+		.cmp-flex-tabs:not(.cmp-flex-tabs--accordion) .cmp-flex-tabs__tab {
+			/* shift all tabs to appear before content */
+			order: -1;
+			/* let tabs scale to fit multiple on each row */
+			width: 24%;
+		}
+	}
+
+
+	.cmp-flex-tabs__content {
+		width: 100%;
+		max-height: 0;
+		opacity: 0;
+		overflow: hidden;
+		transition: opacity 0.3s ease-out;
+
+	
+		.half {
+			width: 100%;			
+		  }
+		  /* Acordeon styles */
+		  .tab {
+			position: relative;
+			margin-bottom: 10px;
+			width: 100%;
+			color: #fff;
+			overflow: hidden;
+		  }
+		  .tab input {
+			position: absolute;
+			opacity: 0;
+			z-index: -1;
+		  }
+		  .tab label {
+			position: relative;
+			display: block;
+			padding: 10px 35px 10px 1em;
+			background: rgba(68,68,68, 0.5);
+			font-weight: bold;
+			min-height: 50px;	
+			display: flex;		
+			align-items: center;
+			cursor: pointer;
+		  }
+		  .blue label {
+			background: #2980b9;
+		  }
+		  .tab-content {
+			max-height: 0;
+			overflow: hidden;
+			color: $black;
+			-webkit-transition: max-height .35s;
+			-o-transition: max-height .35s;
+			transition: max-height .35s;
+		  }
+		  .blue .tab-content {
+			background: #3498db;
+		  }
+		  .tab-content p {
+			margin: 1em;
+			font-family: lato,sans-serif;
+			color: #7a7a7a;
+			padding: 15px;
+			font-size: 15px;
+			letter-spacing: 1.2px;
+		  }
+		  /* :checked */
+		  .tab input:checked ~ .tab-content {
+			max-height: 100vh;
+		  }
+		  /* Icon */
+		  .tab label::after {
+			position: absolute;
+			right: 20px;
+			top: 2px;
+			font-size: 38px;
+			line-height: initial;
+			text-align: center;
+			-webkit-transition: all .35s;
+			-o-transition: all .35s;
+			transition: all .35s;
+		  }
+		  .tab input[type=checkbox] + label::after {
+			content: "+";
+		  }
+		
+		  .tab input[type=checkbox]:checked + label::after {
+			transform: rotate(315deg);
+		  }
+
+	}
+	input[data-flex-tab]:checked + .cmp-flex-tabs__tab {
+		background: linear-gradient(180deg, $main-color 30%, $main-hover 97%);
+		transition: background 0.3s ease;
+
+		&:hover{
+			transform: scale(1);
+			transition: transform 0.3s ease;
+		}
+	}
+	input[data-flex-tab]:checked + .cmp-flex-tabs__tab .tabs__tab-wrapper {
+		background: $white;
+		transition: background 0.3s ease;
+	}
+	input[data-flex-tab]:checked + .cmp-flex-tabs__tab .tabs__tab-wrapper .icon-tabs {
+		fill: $main-color;
+		transition: fill 0.3s ease;
+	}
+	input[data-flex-tab]:checked + .cmp-flex-tabs__tab h3 {
+		color: $white;
+		transition: color 0.3s ease;
+	}
+	input[data-flex-tab]:checked + .cmp-flex-tabs__tab + .cmp-flex-tabs__content {
+		max-height: 100rem;
+		padding-top: 1em;
+		padding-bottom: 1em;		
+		opacity: 1;
+		overflow-y: auto;
+		transition: opacity 0.3s ease-in;
+	}
+}
+
+.faq-form{
+	background: url(/wp-content/themes/poland/images/faq-form-bg.jpg) no-repeat top center;
+    background-size: cover;
+    min-height: 700px;
+    background-attachment: fixed;
+	clip-path: polygon(50% 0%,100% 100px,100% 100%,50% 100%,0 100%,0 100px);
+	margin-top: -100px;
+	padding-top: 100px;
+	position: relative;
+	z-index: 9;
+
+	.title-with-line{
+		color: $white;
+
+		&:after{
+			background-color: $white;
+		}
+	}
+}

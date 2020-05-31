@@ -5,7 +5,7 @@ Template Name: Page for business
 
 get_header();?>
 
-<section class="biznes-top">
+<section class="section-top biznes-top">
     <div class="flex_container biznes-top-container wow animate__fadeInUp" data-wow-duration="1.5s">
         <h2>Oszczędzaj z fotowoltaiką dla biznesu!</h2>
     </div>
@@ -165,7 +165,7 @@ get_header();?>
                         <img src="/wp-content/themes/poland/images/logo.svg" alt="">
                         <p>Teraz możesz cieszyć się już z zysków jakie przynosi darmowy prąd ze słońca. Zyskasz na nim Ty i Twój biznes.</p>
                      
-                    </div>
+                    </div>                
                 </div>
             </div>
         </article>

@@ -327,14 +327,17 @@
     height: 100vh;
     margin-top: 100px;
     background-attachment: fixed;
+    position: relative;  
 
     .form-section-container{
         padding-top: 40px;
+        position: relative;
+        z-index: 9;
 
         .form-section-top{
 
             h2{
-                color: $main-color;
+                color: $white;
                 font-size: 34px;
                 text-align: center;
                 font-family: 'Montserrat',sans-serif;
@@ -349,7 +352,7 @@
             h4{
                 text-align: center;
                 font-family: 'Montserrat',sans-serif;      
-                color: $main-color;
+                color: $white;
                 font-size: 24px;     
                 margin: 20px auto;
                 font-weight: 600;             
@@ -393,6 +396,16 @@
                 }
             }
         }
+    }
+    &:after{
+        position: absolute;
+        background: rgba(0, 0, 0, 0.5);
+        content: "";
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0; 
+        z-index: 8;
     }
 }
 

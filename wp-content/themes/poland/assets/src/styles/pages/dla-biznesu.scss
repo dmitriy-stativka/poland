@@ -1,11 +1,14 @@
-.biznes-top{
-    background: url(/wp-content/themes/poland/images/biznes-bg.jpg) no-repeat center center;
-    background-size: cover;
+.section-top{    
     min-height: 700px;
-    background-attachment: fixed;
     position: relative;
     display: flex;
     align-items: center;
+
+    &.biznes-top{
+        background: url(/wp-content/themes/poland/images/biznes-bg.jpg) no-repeat center center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
 
     .biznes-top-container{
         position: relative;

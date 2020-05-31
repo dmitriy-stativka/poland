@@ -5,6 +5,8 @@ $(document).ready(function () {
   $('.single-item').slick({
     infinite: true,
     arrows: true,
+    autoplay: true,
+    autoplaySpeed: 1500,
     nextArrow: '<div class="arrow-next-cont">  <svg class="icon"><use xlink:href="#arrow-next" /></svg> </div>',
     prevArrow: '<div class="arrow-prev-cont">  <svg class="icon"><use xlink:href="#arrow-prev" /></svg> </div>',
   });
@@ -14,7 +16,6 @@ $(document).ready(function () {
       $( ".header-bottom__center" ).removeClass( "animate__fadeOutUpBig" );     
     };
 });
-
 
 
   // Header-top dissapears during scrolling
