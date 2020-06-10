@@ -37,7 +37,7 @@
 <div class="wrapper">
 	<header class="header">
 		<div class="flex_container header-top">
-			<div class="header-top__links">
+			<!-- <div class="header-top__links">
 				<a class="header-top__links-icon" href="#">
 					<svg class="icon-header"><use xlink:href="#sun"/></svg>
 					<span>Kariera</span>	
@@ -50,26 +50,24 @@
 					<svg class="icon-header"><use xlink:href="#sun"/></svg>
 					<span>Relacje inwestorskie</span>	
 				</a>	
-			</div>					
+			</div>					 -->
 		</div>
 		<div class="header-bottom__container">
 			<div class="flex_container header-bottom">
-				<a class="logo" href="#">
-					<img src="/wp-content/themes/poland/images/logo.svg" alt="">
-				</a>
+				<?php 	
+					$custom_logo_id = get_theme_mod( 'custom_logo' );
+					$image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+
+					if($custom_logo_id){ ?>
+						<a href="<?php echo home_url(); ?>" class="logo">
+							<img src="<?php echo $image[0];?>" alt="">
+						</a> 
+					<?php }
+				?>
 				<button class="nav-tools__burger">
 					<span></span>
 				</button>	
 				<div class="header-bottom__center animate__animated">
-					<!-- <ul class="nav-bar">
-						<li><a href="#">Dla domu</a></li>
-						<li><a href="#">Dla biznesu</a></li>
-						<li><a href="#">Dla Rolnika</a></li>
-						<li><a href="#">Farmy PV</a></li>
-						<li><a href="#">FAQ</a></li>
-						<li><a href="#">Kontakt</a></li>
-					</ul> -->
-
 
 					<?php 
 						wp_nav_menu( [
@@ -91,12 +89,10 @@
 						] );
 					?>
 
-
-
 					<a class="blue-btn header-phone" href="#">
 						<svg class="icon"><use xlink:href="#phone"/></svg>
 						<span>INFOLINIA:</span>
-						<span class="header-number">+48 12 307 30 96</span>
+						<span class="header-number"><?php the_field('tell_numb', 10);?></span>
 					</a>
 				</div>									
 			</div>

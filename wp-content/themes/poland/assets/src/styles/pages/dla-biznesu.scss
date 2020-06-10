@@ -111,9 +111,11 @@
             justify-content: space-around;
             align-items: center;
 
-            svg{
-
+            img{
+                max-width: 120px;
+                fill: red;
             }
+
 
             h4{
                 color: $white;
@@ -242,6 +244,11 @@
     max-width: 100%;
     position: relative;
     display: none;
+
+    .title-with-line{
+        color: #fff;
+        font-weight: 600;
+    }
 
     .whole-slider-title{
         position: absolute;

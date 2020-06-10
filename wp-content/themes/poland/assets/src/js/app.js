@@ -235,4 +235,4 @@ $(document).ready(function () {
 
 });
 
-
+$('.search-section-form input[type=submit]').attr({value: ''});
