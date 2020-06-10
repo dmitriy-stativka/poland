@@ -213,6 +213,11 @@
                 margin-bottom: 30px;
             }
 
+            img{
+                max-height: 120px;
+                margin-bottom: 25px;
+            }
+
             .guarantee-span{
                 font-family: 'Montserrat',sans-serif;
                 font-size: 14px;
@@ -223,6 +228,7 @@
 
                 &.span-blue{
                     color: $main-color;
+                    text-align: center;
                 }
             }
 

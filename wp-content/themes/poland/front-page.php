@@ -7,35 +7,31 @@ Template Name: Front-page
 <section class="top-site">
     <div class="flex_container top-site-container">
         <div class="top-site__article wow animate__fadeInUp" data-wow-duration="1.5s">
-            <h1><strong>Prąd ze słońca</strong>na pokolenia</h1>
-            <span>od Lidera rynku mikroinstalacji fotowoltaicznych w Polsce!</span>
+            <h1><?php the_field('general_title'); ?></h1>
+            <span> <?php the_field('desc_general'); ?></span>
         </div>
         <div class="top-site__links wow animate__fadeInUp" data-wow-duration="1.5s">
-            <a class="top-site-link flex_col--1-1 flex_col-desk--1-5 flex_col-tab--1-2" href="">
-                <svg class="icon"><use xlink:href="#sun"/></svg>
-                <strong>Wydajna</strong>
-                <span> technologia</span>
-            </a>
-            <a class="top-site-link flex_col--1-1 flex_col-desk--1-5 flex_col-tab--1-2" href="">
-                <svg class="icon"><use xlink:href="#sun"/></svg>
-                <strong>Gwarancja</strong>
-                <span> Totalna</span>
-            </a>
-            <a class="top-site-link flex_col--1-1 flex_col-desk--1-5 flex_col-tab--1-2" href="">
-                <svg class="icon"><use xlink:href="#sun"/></svg>
-                <strong>Montaż w 10 dni</strong>
-                <span>w cenie</span>
-            </a>
-            <a class="top-site-link flex_col--1-1 flex_col-desk--1-5 flex_col-tab--1-2" href="">
-                <svg class="icon"><use xlink:href="#sun"/></svg>
-                <strong>RRSO 4,5%</strong>
-                <span>na 10 lat</span>
-            </a>
-            <a class="top-site-link flex_col--1-1 flex_col-desk--1-5 flex_col-tab--1-2" href="">
-                <svg class="icon"><use xlink:href="#sun"/></svg>
-                <span>Opieka</span>
-                <strong>COLUMBUS CARE</strong>                
-            </a>
+            <?php
+                $params = array(
+                    'post_type' => 'utp',
+                    'posts_per_page' => 5
+                );
+                $query = new WP_Query( $params );
+                ?>
+                <?php if($query->have_posts()): ?>
+                    <?php $number = 0; ?>
+                    <?php while ($query->have_posts()): $query->the_post() ?>
+                        <?php $image_utp = get_field('image_utp')['url']; ?>
+                        <?php $title_utp = get_field('title_utp'); ?>
+
+                    <a class="top-site-link flex_col--1-1 flex_col-desk--1-5 flex_col-tab--1-2" href="">
+                        <img src="<?php echo $image_utp;?>" alt="">
+                        <strong> <?php echo $title_utp;?></strong>
+                    </a>
+                            
+                        <?php endwhile; ?>
+                <?php endif; 
+            ?>
         </div>
     </div>
 </section>
@@ -43,12 +39,18 @@ Template Name: Front-page
 <section class="columbus-house animate__animated">
     <div class="flex_container columbus-house-container">
         <div class="columbus-house__top wow animate__fadeInUp" data-wow-duration="2s">
-            <h2>Tak wygląda fotowoltaika od <strong>Columbus Energy</strong></h2>
-            <span>Elegancka i wydajna technologia monokrystaliczna Full Black.</span>
+
+            <?php
+                wp_reset_postdata();
+                global $post;
+            ?>
+
+            <h2><?php the_field('title_block_sec_slide_first'); ?></h2>
+            <span><?php the_field('desc_block_sec_slide_first'); ?></span>
             <a class="blue-btn columbus-house-link" href="#">CHCĘ WYCENĘ</a>
         </div>
         <div class="columbus-house__bottom">
-            <span class="columbus-house__bottom-text wow animate__fadeInLeft" data-wow-duration="2s">ZOBACZ JAK WYGLĄDAJĄ INNE INSTALACJE NA RYNKU.</span>
+            <span class="columbus-house__bottom-text wow animate__fadeInLeft" data-wow-duration="2s"><?php the_field('text_block_sec_slide_first'); ?></span>
             <button class="columbus-house__bottom-btn">Zobacz</button>
         </div>
     </div>
@@ -56,17 +58,17 @@ Template Name: Front-page
 <section class="columbus-house columbus-house-another-bg columbus-house-hidden">
     <div class="flex_container columbus-house-container">
         <div class="columbus-house__top wow animate__fadeInUp" data-wow-duration="2s">
-            <h2>Tak wyglądają <strong>inne instalacje</strong> na rynku</h2>
-            <span> Mniej wydajna, stara technologia polikrystaliczna.</span>           
+            <h2><?php the_field('title_block_sec_slide_sec'); ?></h2>
+            <span><?php the_field('desc_block_sec_slide_sec'); ?></span>
         </div>
         <div class="columbus-house__bottom">
-            <span class="columbus-house__bottom-text wow animate__fadeInLeft" data-wow-duration="2s">ZOBACZ JAK WYGLĄDA NOWOCZESNA INSTALACJA FOTOWOLTAICZNA OD COLUMBUS ENERGY.</span>
+            <span class="columbus-house__bottom-text wow animate__fadeInLeft" data-wow-duration="2s"><?php the_field('text_block_sec_slide_sec'); ?></span>
             <button class="columbus-house__bottom-btn">Zobacz</button>
         </div>
     </div>
 </section>
 
-<section class="grig-section">
+<!-- <section class="grig-section">
     <div class="flex_container grig-section-container">
         <h3 class="wow animate__fadeInLeft" data-wow-duration="1.5s">Ostatnie informacje</h3>
         <div class="grid-section-middle">
@@ -102,14 +104,18 @@ Template Name: Front-page
             Dowiedz się więcej >
         </a>
     </div>
-</section>
+</section> -->
 
 <section class="form-section">
     <div class="flex_container form-section-container">
         <div class="form-section-top wow animate__fadeInUp" data-wow-duration="1.5s">
             <h2>OSZCZĘDZAJ NA RACHUNKACH ZA PRĄD</h2>
             <h4>umów sie z doradcą energetycznym na wideo-konsultację</h4>
-        </div>    
+        </div>   
+
+
+        <?php echo do_shortcode('[contact-form-7 id="50" title="Контактная форма 1"]')?>
+
         <!-- <form action="/#wpcf7-f1380-o1" method="post" class="form-block wpcf7-form" novalidate="novalidate">
             <div style="display: none;"> 
                 <input type="hidden" name="_wpcf7" value="1380"> 
@@ -126,7 +132,7 @@ Template Name: Front-page
             </div>
             <div class="form-row">
                 <div class="form-group flex_col-desk--1-2">
-                    <input type="tel" name="your-phone" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-tel form-control" aria-invalid="false" placeholder="Numer telefonu">
+                    <input type="tel" name="your-phone" value="" size="40" clas s="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-tel form-control" aria-invalid="false" placeholder="Numer telefonu">
                 </div>
                 <div class="form-group flex_col-desk--1-2">
                     <span class="wpcf7-form-control-wrap your-postcode">
@@ -174,16 +180,8 @@ Template Name: Front-page
     </div>
 </section>
 
-<section class="search-section">
-    <div class="flex_container search-section-container"> 
-        <h4 class="flex_col-desk--1-4 wow animate__fadeInLeft" data-wow-duration="1.5s">Chcesz być na bieżąco?</h4>
-        <p class="flex_col-desk--1-2 wow animate__fadeInUp" data-wow-duration="1.5s">Zapisz się do naszego darmowego newslettera i bądź na bieżąco z nowościami.</p>
-        <form class="search-section-form flex_col-desk--1-4 wow animate__fadeInRight" data-wow-duration="1.5s" action="">
-            <input type="text" placeholder="WPISZ SWÓJ E-MAIL">
-            <button type="submit"></button>
-        </form>
-    </div>
-</section>
-
+<?php
+    include 'templates/search-section.php'
+?>
 
 <?php get_footer(); ?>

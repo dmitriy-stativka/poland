@@ -155,3 +155,109 @@ function poland_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'poland_scripts' );
+
+
+
+register_post_type('utp', array(
+    'labels'             => array(
+      'name'               => 'УТП',
+      'singular_name'      => 'УТП',
+      'add_new'            => 'ДобавитьУТП',
+      'add_new_item'       => 'Добавить новую УТП',
+      'edit_item'          => 'Редактировать УТП',
+      'new_item'           => 'Новая настройку',
+      'view_item'          => 'Посмотреть настройку',
+      'search_items'       => 'Найти настройку',
+      'not_found'          => 'Не найдено',
+      'not_found_in_trash' => 'В корзине ничего не найдено',
+      'parent_item_colon'  => '',
+      'menu_name'          => 'УТП'
+      ),
+    'public'             => true,
+    'publicly_queryable' => true,
+    'show_ui'            => true,
+    'show_in_menu'       => true,
+    'query_var'          => true,
+    'rewrite'            => true,
+    'capability_type'    => 'post',
+    'has_archive'        => false,
+    'hierarchical'       => false,
+    'menu_position'      => null,
+    'supports'            => array( 'title', 'comments'  )  // 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields',
+  ));
+
+
+  register_post_type('energeticheskaya', array(
+    'labels'             => array(
+      'name'               => 'Энергетическая независимость',
+      'singular_name'      => 'Энергетическая независимость',
+      'add_new'            => 'Добавить енергетическую независимость',
+      'add_new_item'       => 'Добавить новую енергетическую независимость',
+      'edit_item'          => 'Редактировать енергетическую независимость',
+      'new_item'           => 'Новая настройку',
+      'view_item'          => 'Посмотреть настройку',
+      'search_items'       => 'Найти настройку',
+      'not_found'          => 'Не найдено',
+      'not_found_in_trash' => 'В корзине ничего не найдено',
+      'parent_item_colon'  => '',
+      'menu_name'          => 'Энергетическая независимость'
+      ),
+    'public'             => true,
+    'publicly_queryable' => true,
+    'show_ui'            => true,
+    'show_in_menu'       => true,
+    'query_var'          => true,
+    'rewrite'            => true,
+    'capability_type'    => 'post',
+    'has_archive'        => false,
+    'hierarchical'       => false,
+    'menu_position'      => null,
+    'supports'            => array( 'title', 'comments'  )  // 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields',
+  ));
+
+
+
+
+
+
+  
+  register_post_type('lgota', array(
+    'labels'             => array(
+      'name'               => 'Льготы',
+      'singular_name'      => 'Льготы',
+      'add_new'            => 'Добавить Льготу',
+      'add_new_item'       => 'Добавить новую льготу',
+      'edit_item'          => 'Редактировать льготу',
+      'new_item'           => 'Новая настройку',
+      'view_item'          => 'Посмотреть настройку',
+      'search_items'       => 'Найти настройку',
+      'not_found'          => 'Не найдено',
+      'not_found_in_trash' => 'В корзине ничего не найдено',
+      'parent_item_colon'  => '',
+      'menu_name'          => 'Льготы'
+      ),
+    'public'             => true,
+    'publicly_queryable' => true,
+    'show_ui'            => true,
+    'show_in_menu'       => true,
+    'query_var'          => true,
+    'rewrite'            => true,
+    'capability_type'    => 'post',
+    'has_archive'        => false,
+    'hierarchical'       => false,
+    'menu_position'      => null,
+    'supports'            => array( 'title', 'comments'  )  // 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields',
+  ));
+
+
+
+
+
+
+
+
+
+
+
+
+
