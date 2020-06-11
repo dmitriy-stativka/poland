@@ -339,6 +339,11 @@
         padding-top: 40px;
         position: relative;
         z-index: 9;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        padding-bottom: 50px;
 
         .form-section-top{
 
@@ -369,6 +374,139 @@
                 }
             }
 
+        }
+
+        .form-container{
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+            background: #fff;
+            padding: 50px 40px;
+
+            .wpcf7-form{
+
+
+                p{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+
+                    &:nth-child(2){                      
+
+                       
+                        .wpcf7-form-control-wrap{
+                            width: 100%;
+
+                            &.tel-661{
+                                width: 100%;
+                                display: flex;
+                                align-items: center;
+
+                                input{
+                                    width: 100%;
+                                    background: transparent;
+                                    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+                                    border-radius: 0;
+                                    height: 50px;
+                                    font-family: "Montserrat", sans-serif;
+                                    font-weight: 500;
+                                    font-size: 15px;
+                                }       
+                                
+                                @media(min-width: $desktop) {
+                                    width: 49%;
+                                }
+                            }
+
+                            &:last-child{
+                                width: 100%;
+                                display: flex;
+                                align-items: center;
+
+                                @media(min-width: $desktop) {
+                                    width: 49%;
+                                }
+                            }
+                        }
+                    }     
+
+                    &:nth-child(3) {
+
+                        .wpcf7-list-item{
+                            margin: 0;
+                     
+
+                        label{
+                            display: flex;
+                            
+                            input{
+                                width: 55px;
+                                height: 30px;
+                                margin-right: 30px;
+                            }
+
+                            .wpcf7-list-item-label{
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+
+                    &:nth-child(4) {
+                        position: relative;
+
+                        .wpcf7-list-item{
+                            margin: 0;
+                     
+
+                        label{
+                            display: flex;
+                            
+                            input{
+                                width: 45px;
+                                height: 30px;
+                                margin-right: 30px;
+                            }
+
+                            .wpcf7-list-item-label{
+                                font-size: 12px;
+                            }
+                        }
+                    }
+
+                        .wpcf7-submit{
+                            background:#4152a0;   
+                            border-radius: 0;
+                            color: #fff;
+                            padding: 10px 30px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin: 50px auto 0;
+                            transition: box-shadow 0.3s ease;
+                            max-width: 420px;
+                            text-align: center;
+                            text-transform: uppercase;
+                            border: 2px solid $white;
+                            transition: 0.3s ease;
+
+                            &:hover{
+                                color: $main-color;
+                                border: 2px solid $main-color;
+                                background: $white;
+                                transition: 0.3s ease;
+                            }
+                        }
+
+                        .ajax-loader{
+                            position: absolute;
+                            bottom: -30px;
+                            right: 48%;                          
+                        }
+                    }
+                }
+            }
         }
 
         .form-block{

@@ -19,20 +19,22 @@ $(document).ready(function () {
 
 
   // Header-top dissapears during scrolling
-  const headerTop = document.querySelector('.header-top');
-  
+
+
   let hidden = false;
   window.addEventListener("scroll",()=> {
       if(window.scrollY > 0 && !hidden) {        
-          headerTop.classList.add('hidden');
+  
                  
           hidden = true
-          $(".logo").animate({'top' : '0'});
+          $(".logo").animate({'max-width' : '180px'});
+          $(".header-bottom").animate({'padding' : '15px 0px'})
       } else if(window.scrollY === 0 && hidden) {     
-          headerTop.classList.remove('hidden');
+
              
           hidden = false
-          $(".logo").animate({'top' : '-15'});
+          $(".logo").animate({'max-width' : '220px'});
+          $(".header-bottom").animate({'padding' : '30px 0px'})
       }
   });
   // End

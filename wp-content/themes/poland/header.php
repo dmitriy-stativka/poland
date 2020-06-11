@@ -36,22 +36,7 @@
 
 <div class="wrapper">
 	<header class="header">
-		<div class="flex_container header-top">
-			<!-- <div class="header-top__links">
-				<a class="header-top__links-icon" href="#">
-					<svg class="icon-header"><use xlink:href="#sun"/></svg>
-					<span>Kariera</span>	
-				</a>
-				<a class="header-top__links-icon" href="#">
-					<svg class="icon-header"><use xlink:href="#sun"/></svg>
-					<span>Blog</span>  
-				</a>
-				<a class="header-top__links-icon" href="#">
-					<svg class="icon-header"><use xlink:href="#sun"/></svg>
-					<span>Relacje inwestorskie</span>	
-				</a>	
-			</div>					 -->
-		</div>
+	
 		<div class="header-bottom__container">
 			<div class="flex_container header-bottom">
 				<?php 	
