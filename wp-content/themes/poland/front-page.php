@@ -113,8 +113,10 @@ Template Name: Front-page
             <h4>umów sie z doradcą energetycznym na wideo-konsultację</h4>
         </div>   
 
-
-        <?php echo do_shortcode('[contact-form-7 id="50" title="Контактная форма 1"]')?>
+        <div class="form-container">
+            <?php echo do_shortcode('[contact-form-7 id="50" title="Контактная форма 1"]')?>
+        </div>
+        
 
         <!-- <form action="/#wpcf7-f1380-o1" method="post" class="form-block wpcf7-form" novalidate="novalidate">
             <div style="display: none;"> 
