@@ -374,6 +374,8 @@ get_header();?>
 <section class="faq-form">
 	<div class="flex_container">
 		<h3 class="title-with-line wow animate__fadeInUp" data-wow-duration="1.5s">Wybierz kategorię</h3>
+
+		<?php echo do_shortcode('[contact-form-7 id="204" title="faq"]'); ?>
 	</div>
 </section>
 

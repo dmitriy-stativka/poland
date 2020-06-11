@@ -105,7 +105,38 @@
 
           li{
             margin: 8px 0; 
-            transition: color 0.3s ease;           
+            transition: color 0.3s ease;  
+            position: relative;
+            
+            &:before{
+              content: "";
+              height: 2px;
+              background-color: $main-color;
+              position: absolute;
+              bottom: -2px;
+              width: 0;
+              left: 0;
+              right: inherit;
+              transition: right .3s ease, width .3s ease;
+            }
+            
+            
+            &.current_page_item{
+              &:before{
+                right: 0;
+                width: 100%;
+                transition: right .3s ease, width .3s ease;
+              }
+            }
+
+
+            &:hover{
+              &:before{
+                right: 0;
+                width: 100%;
+                transition: right .3s ease, width .3s ease;
+              }
+            }
 
             a{
               font-size: 16px;
