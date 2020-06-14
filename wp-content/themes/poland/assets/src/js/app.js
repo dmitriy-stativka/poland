@@ -62,6 +62,20 @@ $(document).ready(function () {
     $(".columbus-house").toggleClass("columbus-house-hidden");    
   })
 
+  var p = $(".popup__overlay");
+$(".header-phone").click(function () {
+  console.log('asdadad');
+  p.addClass("popup_open");
+});
+$(".popup__close").click(function () {
+  p.removeClass("popup_open");
+});
+$(function () {
+  $(".header-phone").bind("click", function (e) {
+    e.preventDefault();
+  });
+});
+
 
   // $(".nav-tools__search").on("click", function () {
   //   $(".nav-tools__search-block_click").toggleClass("nav-tools__search-block_click-show");
@@ -237,21 +251,6 @@ $(document).ready(function () {
 
 });
 
-// function initialize() {
-//   var mapOptions = {
-//     zoom: 15,
-//     center: new google.maps.LatLng(59.9992618,30.3648466)
-//   }
-//   var map = new google.maps.Map(document.getElementById('map-canvas'),
-//                                 mapOptions);
-//   var image = "http://i.neoseeker.com/mgv/499846/846/33/15847_179440563793_179437393793_2772323_4548598_n_icon.jpg";
-//   var myLatLng = new google.maps.LatLng(59.999,30.364);
-//   var beachMarker = new google.maps.Marker({
-//     position: myLatLng,
-//     map: map,
-//     icon: image
-//   });
-// }
-// google.maps.event.addDomListener(window, 'load', initialize);
+
 
 $('.search-section-form input[type=submit]').attr({value: ''});

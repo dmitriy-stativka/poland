@@ -110,6 +110,25 @@
 
 
 	</svg>
+
+	<div class="popup__overlay">
+			<span class="popup__close"><span></span></span>
+		  <div class="popup">
+		  <?php echo do_shortcode('[contact-form-7 id="50" title="Контактная форма 1"]')?>
+			<!-- <h1>
+				Появились вопросы?
+				Задайте их профессионалу
+			</h1>
+			<form action="">
+				<input type="text" placeholder="Имя*" required>
+				<input type="email" placeholder="Email*" required>
+				<input type="text" placeholder="Тема">
+				<input type="text" placeholder="Статья">
+				<textarea placeholder="Ваше сообщение" id="textArea-connect" rows="1"></textarea>
+				<button type="submit">Отправить</button>
+			</form> -->
+		</div>
+	  </div>
 		
 	</footer><!-- #colophon -->
 </div><!-- #page -->
