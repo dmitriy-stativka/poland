@@ -1,0 +1,152 @@
+.contact-top{
+	background: url(/wp-content/themes/poland/images/contacts-bg.jpg) no-repeat top center;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.contact-info{
+    clip-path: polygon(50% 0%,100% 100px,100% 100%,50% 100%,0 100%,0 100px);
+	margin-top: -100px;
+	padding-top: 100px;
+	position: relative;
+	z-index: 9;
+	background: $white;
+    padding-bottom: 150px;
+
+    .flex_container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .icon-contact{
+            fill: $main-color;
+            width: 40px;
+            height: 40px;
+        }
+
+        .contact-phone{
+            color: #7a7a7a;
+            font-family: lato,sans-serif;
+            font-size: 24px;
+        }
+
+        .contact-text{
+            font-family: lato,sans-serif;
+            color: #7a7a7a;
+            font-size: 16px;
+            letter-spacing: 1.2px;
+        }
+
+        .contact-mail{
+            color: $main-color;
+        }
+
+        .contact-logo{
+            margin-top: 50px;
+        }
+
+        .contact-fax{
+            font-family: lato,sans-serif;
+            color: #7a7a7a;
+            font-size: 16px;
+            letter-spacing: 1.2px;
+            margin-top: 30px;
+        }
+    }   
+}
+
+.contact-link{
+    background: url(/wp-content/themes/poland/images/biznes-bg-3.jpg) no-repeat top center;
+    background-size: cover;
+    min-height: 300px;
+    background-attachment: fixed;
+	clip-path: polygon(50% 0%,100% 100px,100% 100%,50% 100%,0 100%,0 100px);
+	margin-top: -100px;
+	padding-top: 100px;
+	position: relative;
+	z-index: 9;
+    padding-bottom: 200px;
+    
+    h3{
+        color: $white;
+        margin: auto;
+        max-width: 100%;
+        text-align: center;
+
+        @media(min-width: $desktop) {
+            max-width: 20%;
+        }
+    }
+}
+
+.contact-map{
+    clip-path: polygon(50% 0%,100% 100px,100% 100%,50% 100%,0 100%,0 100px);
+	margin-top: -100px;
+	padding-top: 100px;
+	position: relative;
+    z-index: 9;
+    
+    iframe{
+        clip-path: polygon(50% 0%,100% 100px,100% 100%,50% 100%,0 100%,0 100px);
+        margin-top: -150px;       
+    }
+
+    .above-map-block{
+        display: none;
+        justify-content: center;
+        max-width: 1000px;
+        margin: 0 auto;
+        position: absolute;
+        left: 10%;
+        right: 10%;
+        bottom: 50px;
+
+
+        .left-block{
+            background: $main-color;
+            padding: 50px 20px;           
+            width: 50%;
+            display: flex;
+            justify-content: space-around;            
+
+            .icon-block{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .icon-contact{
+                    width: 50px;
+                    height: 50px;
+                    margin-bottom: 20px;
+                }
+
+                span{
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #fff;
+                    letter-spacing: 1.67px;
+                }
+            }
+        }
+
+        .right-block{    
+            background: $white;        
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 20px;             
+
+            span{
+                font-family: lato,sans-serif;
+                color: #7a7a7a;
+                font-size: 16px;
+                letter-spacing: 1.2px;
+            }
+        }
+
+        @media(min-width: $desktop) {
+            display: flex;
+        }
+    }
+}
