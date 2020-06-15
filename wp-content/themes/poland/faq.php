@@ -94,7 +94,7 @@ get_header();?>
 			<input id="l-tab-2" data-flex-tab type="radio" name="flex-tab">
 			<label class="cmp-flex-tabs__tab wow animate__fadeInRight" data-wow-duration="1s" for="l-tab-2">
 				<span class="tabs__tab-wrapper">
-					<svg class="icon-tabs"><use xlink:href="#biznes-1"/></svg>
+					<svg class="icon-tabs"><use xlink:href="#sun"/></svg>
 				</span>	
 				<h3>Mój prąd ze słońca</h3>
 			</label>
@@ -173,7 +173,7 @@ get_header();?>
 			<input id="l-tab-3" data-flex-tab type="radio" name="flex-tab">
 			<label class="cmp-flex-tabs__tab wow animate__fadeInRight" data-wow-duration="1.5s" for="l-tab-3">
 				<span class="tabs__tab-wrapper">
-					<svg class="icon-tabs"><use xlink:href="#biznes-1"/></svg>
+					<svg class="icon-tabs"><use xlink:href="#solar"/></svg>
 				</span>	
 				<h3>Moja instalacja fotowoltaiczna</h3>
 			</label>
@@ -338,7 +338,7 @@ get_header();?>
 			<input id="l-tab-4" data-flex-tab type="radio" name="flex-tab">
 			<label class="cmp-flex-tabs__tab wow animate__fadeInRight" data-wow-duration="2s" for="l-tab-4">
 				<span class="tabs__tab-wrapper">
-					<svg class="icon-tabs"><use xlink:href="#biznes-1"/></svg>
+					<svg class="icon-tabs"><use xlink:href="#house"/></svg>
 				</span>	
 				<h3>Mój dom a fotowoltaika</h3>	
 			</label>		
