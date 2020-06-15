@@ -254,10 +254,43 @@ register_post_type('utp', array(
 
 
 
+  register_post_type('faq', array(
+    'labels'             => array(
+      'name'               => 'FAQ',
+      'singular_name'      => 'FAQ',
+      'add_new'            => 'Добавить FAQ',
+      'add_new_item'       => 'Добавить новый FAQ',
+      'edit_item'          => 'Редактировать FAQ',
+      'new_item'           => 'Новая настройку',
+      'view_item'          => 'Посмотреть настройку',
+      'search_items'       => 'Найти настройку',
+      'not_found'          => 'Не найдено',
+      'not_found_in_trash' => 'В корзине ничего не найдено',
+      'parent_item_colon'  => '',
+      'menu_name'          => 'FAQ'
+      ),
+    'public'             => true,
+    'publicly_queryable' => true,
+    'show_ui'            => true,
+    'show_in_menu'       => true,
+    'query_var'          => true,
+    'rewrite'            => true,
+    'capability_type'    => 'post',
+    'has_archive'        => false,
+    'hierarchical'       => false,
+    'menu_position'      => null,
+    'supports'            => array( 'title', 'comments'  )  // 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields',
+  ));
 
 
 
 
 
 
-
+// какой используется файл шаблона
+add_action('wp_head', 'show_template'); // перед шапкой
+// add_action('wp_footer', 'show_template'); // в подвале
+function show_template(){
+  global $template;
+  echo $template;
+}
