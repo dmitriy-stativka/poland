@@ -1,0 +1,21 @@
+.page_error{
+    min-height: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    b{
+        font-size: 300px;
+        font-family: 'Montserat', sans-serif;
+        color: $main-color;
+        text-align: center;
+    }
+
+    p{
+        font-size: 40px;
+    }
+
+    a{
+        font-size: 30px;
+    }
+}
