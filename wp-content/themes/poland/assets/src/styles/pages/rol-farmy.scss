@@ -1,7 +1,6 @@
 .rolnik-top{
     background-image: url(/wp-content/themes/poland/images/dla-rolnika-top-bg.jpg);
-    background-size: cover;
-    background-attachment: fixed;
+    background-size: cover;    
 
     .rolnik-top-container{
         
@@ -22,6 +21,10 @@
             text-align: left;
             margin-top: 20px;
         }
+    }
+
+    @media(min-width: $desktop) {
+        background-attachment: fixed;
     }
 }
 

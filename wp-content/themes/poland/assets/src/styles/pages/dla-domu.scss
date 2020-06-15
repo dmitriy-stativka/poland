@@ -1,7 +1,6 @@
 .dla-domu-top{
     background: url(/wp-content/themes/poland/images/dla-domu-bg.jpg) no-repeat top center;
-    background-size: cover;
-    background-attachment: fixed;
+    background-size: cover;    
     min-height: 100vh;    
     margin-top: 100px;
     display: flex;
@@ -44,6 +43,7 @@
 
     @media (min-width: $desktop) {
         margin-top: 60px;
+        background-attachment: fixed;
     }
 }
 
@@ -287,8 +287,7 @@
 
 .columbus-only{
     background: url(/wp-content/themes/poland/images/only-bg.jpg) no-repeat bottom center;
-    background-size: cover;
-    background-attachment: fixed;
+    background-size: cover;    
     min-height: 100vh;      
     display: flex;
     position: relative;    
@@ -372,6 +371,10 @@
         bottom: 0;
         z-index: 8;
     }
+
+    @media(min-width: $desktop) {
+        background-attachment: fixed;
+    }
 }
 
 .dla-domu-grid{
@@ -439,8 +442,7 @@
 .dla-domu-bottom{
     background: url(/wp-content/themes/poland/images/dla-domu-bottom-bg.jpg) no-repeat top center;
     background-size: cover;
-    background-position: center 40%;
-    background-attachment: fixed;
+    background-position: center 40%;    
     min-height: 500px;
     position: relative;
     display: flex;
@@ -492,5 +494,9 @@
         right: 0;
         bottom: 0;
         z-index: 8;
+    }
+
+    @media(min-width: $desktop) {
+        background-attachment: fixed;
     }
 }

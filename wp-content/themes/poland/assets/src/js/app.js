@@ -14,30 +14,29 @@ $(document).ready(function () {
   $(window).resize(function () {
     if($(window).width() >= 1023){
       $( ".header-bottom__center" ).removeClass( "animate__fadeOutUpBig" );     
+
+  
+
     };
 });
 
+    let hidden = false;
+    window.addEventListener("scroll",()=> {
+        if(window.scrollY > 0 && !hidden && $(window).width() >= 1023) {        
 
-  // Header-top dissapears during scrolling
+                  
+            hidden = true
+            $(".logo").animate({'max-width' : '180px'});
+            $(".header-bottom").animate({'padding' : '15px 0px'})
+        } else if(window.scrollY === 0 && hidden) {     
 
+              
+            hidden = false
+            $(".logo").animate({'max-width' : '200px'});
+            $(".header-bottom").animate({'padding' : '30px 0px'})
+        }
+    });
 
-  let hidden = false;
-  window.addEventListener("scroll",()=> {
-      if(window.scrollY > 0 && !hidden) {        
-  
-                 
-          hidden = true
-          $(".logo").animate({'max-width' : '180px'});
-          $(".header-bottom").animate({'padding' : '15px 0px'})
-      } else if(window.scrollY === 0 && hidden) {     
-
-             
-          hidden = false
-          $(".logo").animate({'max-width' : '220px'});
-          $(".header-bottom").animate({'padding' : '30px 0px'})
-      }
-  });
-  // End
 
   // Burger btn on click
   $(".nav-tools__burger").on("click", function () {

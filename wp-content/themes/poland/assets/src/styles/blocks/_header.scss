@@ -23,18 +23,24 @@
   
       .logo{
         position: absolute;
-        top: 0px;
+        top: 20px;
         left: 20px;
-        max-width: 65px;
-        z-index: 10;
-        max-width: 60px;
-        width: 100%;
+        z-index: 10;       
+        width: 85px;
+        max-width: 85px;
         background-color: white;
         padding: 20px;      
         box-shadow: 0 0 10px rgba(65,82,160, 0.2);
 
-        @media (min-width: $desktop) { 
-          max-width: 220px; 
+        @media (min-width: $desktop) and (max-width: 1440px) { 
+          max-width: 140px; 
+          width: 100%;
+          top: 0;
+        }
+
+        @media (min-width: 1440px) {
+          max-width: 220px;
+          width: 100%;
         }
       } 
 
@@ -45,6 +51,7 @@
         align-items: center;
         transform: translateY(-700px);
         position: absolute;
+        padding-bottom: 20px;
         top: 65px;
         background: $white;
         left: 0;
@@ -96,10 +103,10 @@
               text-transform: uppercase;
               font-weight: 600;
 
-              @media (min-width: $desktop) and (max-width: 1280px) {    
-                font-size: 12px;  
+              @media (min-width: $desktop) and (max-width: 1440px) {    
+                font-size: 10px;  
               }
-              @media (min-width: 1280px) { 
+              @media (min-width: 1440px) { 
                 font-size: 16px;     
               }
             }

@@ -7,7 +7,10 @@
     &.biznes-top{
         background: url(/wp-content/themes/poland/images/biznes-bg.jpg) no-repeat center center;
         background-size: cover;
-        background-attachment: fixed;
+        
+        @media(min-width: $desktop) {
+            background-attachment: fixed;
+        }
     }
 
     .biznes-top-container{
@@ -87,8 +90,7 @@
 
 .biznes-icons{
     background: url(/wp-content/themes/poland/images/biznes-bg-3.jpg) no-repeat center center;
-    background-size: cover;   
-    background-attachment: fixed;
+    background-size: cover;       
     clip-path: polygon(50% 0%,100% 100px,100% 100%,50% 100%,0 100%,0 100px);
     position: relative;
     z-index: 9;
@@ -137,6 +139,10 @@
         @media(min-width: $desktop) {
             flex-direction: row;
         }
+    }
+
+    @media (min-width: $desktop) {
+        background-attachment: fixed;
     }
 }
 
@@ -480,8 +486,7 @@
 .biznes-bottom-link{
     background: url(/wp-content/themes/poland/images/biznes-bottom-link-bg.jpg) no-repeat center center;
     background-size: cover;
-    min-height: 700px;
-    background-attachment: fixed;
+    min-height: 700px;    
     position: relative;
     display: flex;
     flex-direction: column;
@@ -530,5 +535,9 @@
         right: 0;
         bottom: 0;
         z-index: 8;
+    }
+
+    @media(min-width: $desktop) {
+        background-attachment: fixed;
     }
 }
