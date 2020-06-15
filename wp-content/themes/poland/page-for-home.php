@@ -17,7 +17,6 @@ get_header();?>
         <h2 class="dla-domu-advantages-title wow animate__fadeInUp" data-wow-duration="1.5s"><?php the_field('title_poznanie');?></h2>
         <div class="dla-domu-advantages-middle">
 
-
             <div class="advantages-middle-block wow animate__fadeInLeft" data-wow-duration="1.5s">
                 <div class="advantages-middle-block-top">
                     <img src="<?php echo get_field('sravnenie_first')['url'];?>" alt="">
@@ -80,7 +79,7 @@ get_header();?>
                                 $izobrazhenie_lgoty = get_field('izobrazhenie_lgoty')['url'];     
                             ?>
 
-                            <a class="guarantee-middle-block wow animate__fadeInRight" data-wow-duration="0.5s">
+                            <a href="<?php the_permalink();?>" class="guarantee-middle-block wow animate__fadeInRight" data-wow-duration="0.5s">
                                 <img src="<?php echo $izobrazhenie_lgoty;?>" alt="">
                                 <span class="guarantee-span span-blue"><?php echo $name_of_lgota;?></span>
                                 <p class="guarantee-middle-block-text"><?php echo $kratkoe_opisanie_lgoty;?></p>

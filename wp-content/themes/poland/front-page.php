@@ -24,7 +24,7 @@ Template Name: Front-page
                         <?php $image_utp = get_field('image_utp')['url']; ?>
                         <?php $title_utp = get_field('title_utp'); ?>
 
-                    <a class="top-site-link flex_col--1-1 flex_col-desk--1-5 flex_col-tab--1-2" href="">
+                    <a class="top-site-link flex_col--1-1 flex_col-desk--1-5 flex_col-tab--1-2" href="<?php the_permalink();?>">
                         <img src="<?php echo $image_utp;?>" alt="">
                         <strong> <?php echo $title_utp;?></strong>
                     </a>
