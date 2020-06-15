@@ -205,12 +205,234 @@
 	padding-top: 100px;
 	position: relative;
 	z-index: 9;
+	padding-bottom: 200px;
 
 	.title-with-line{
 		color: $white;
 
 		&:after{
 			background-color: $white;
+		}
+	}
+
+	h2{
+		color: $main-color;
+		font-size: 26px;
+		text-align: center;
+		letter-spacing: 2.51px;
+		font-family: lato,sans-serif;
+	}
+
+	.wpcf7-form{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		max-width: 800px;
+		margin: 0 auto;
+
+		p{
+
+			&:nth-child(2){
+				width: 100%;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+
+				input{
+					background: transparent;
+					border: 2px solid $main-color;
+					border-radius: 25px;
+					padding: 0px 15px;
+					color: $white;
+					font-size: 12px;
+
+					&::placeholder{
+						color: $white;
+					}
+
+					@media (min-width: $desktop) {
+						font-size: 15px;
+					}
+				}
+
+				span{
+					
+					&:first-child{
+						width: 100%;
+						margin-bottom: 15px;
+					}
+
+					&.tel-447 {
+						width: 49%;
+						
+						input{
+							width: 100%;
+							height: 50px;
+						}
+					}
+
+					&:last-child{
+						width: 49%;
+						padding: 0;
+						margin: 0;
+
+						input{
+							height: 50px;						
+							margin: 0;
+						}
+					}
+				}
+			}	
+			
+			&:nth-child(3) {
+				width: 100%;
+				color: $white;
+			}
+
+			&:nth-child(4){
+				width: 32%;
+
+				.last{
+					margin-left: 0;
+
+					label{
+						display: flex;
+						align-items: center;
+
+						input{
+							width: 15px;
+							height: 15px;
+							margin-right: 15px;
+							cursor: pointer;
+						}
+
+						span{
+							color: $white;
+							font-size: 12px;
+						}
+					}
+				}
+			}
+			&:nth-child(5){
+				width: 32%;
+
+				.last{
+					margin-left: 0;
+
+					label{
+						display: flex;
+						align-items: center;
+
+						input{
+							width: 15px;
+							height: 15px;
+							margin-right: 15px;
+							cursor: pointer;
+						}
+
+						span{
+							color: $white;
+							font-size: 12px;
+						}
+					}
+				}
+			}
+			&:nth-child(6){
+				width: 32%;
+
+				.last{
+					margin-left: 0;
+
+					label{
+						display: flex;
+						align-items: center;
+
+						input{
+							width: 15px;
+							height: 15px;
+							margin-right: 15px;
+							cursor: pointer;
+						}
+
+						span{
+							color: $white;
+							font-size: 12px;
+						}
+					}
+				}
+			}
+
+			&:nth-child(7){
+				width: 100%;
+
+				.last{
+					margin-left: 0;
+
+					label{
+						display: flex;						
+
+						input{
+							width: 70px;
+							height: 15px;
+							margin-right: 15px;
+							cursor: pointer;
+
+							@media(min-width: $desktop) {
+								width: 22px;
+							}
+						}
+
+						span{
+							color: $white;
+							font-size: 12px;
+						}
+					}
+				}
+			}
+
+			&:nth-child(8){
+				width: 100%;
+				text-align: center;
+				color: $white;
+			}
+
+			&:nth-child(9){
+				width: 100%;
+				display: flex;
+				justify-content: center;
+
+				input{
+					background: transparent;
+					height: 50px;
+					border: 2px solid $main-color;
+					color: $main-color;
+					border-radius: 25px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					max-width: 250px;
+					width: 100%;
+					font-size: 18px;
+					transition: color 0.3s ease, border 0.3s ease;
+
+					&:hover{
+						color: $white;
+						border: 2px solid $white;
+						transition: color 0.3s ease, border 0.3s ease;
+					}
+				}	
+				
+				.ajax-loader{
+					visibility: hidden!important;
+				}
+			}		
+		}
+		.wpcf7-mail-sent-ok{
+			margin: 30px auto;
+			border: 2px solid $main-color;
+			color: $white;
+			width: 100%;
+			text-align: center;
 		}
 	}
 }

@@ -62,6 +62,20 @@ $(document).ready(function () {
     $(".columbus-house").toggleClass("columbus-house-hidden");    
   })
 
+  var p = $(".popup__overlay");
+$(".header-phone").click(function () {
+  console.log('asdadad');
+  p.addClass("popup_open");
+});
+$(".popup__close").click(function () {
+  p.removeClass("popup_open");
+});
+$(function () {
+  $(".header-phone").bind("click", function (e) {
+    e.preventDefault();
+  });
+});
+
 
   // $(".nav-tools__search").on("click", function () {
   //   $(".nav-tools__search-block_click").toggleClass("nav-tools__search-block_click-show");
@@ -236,5 +250,7 @@ $(document).ready(function () {
 
 
 });
+
+
 
 $('.search-section-form input[type=submit]').attr({value: ''});

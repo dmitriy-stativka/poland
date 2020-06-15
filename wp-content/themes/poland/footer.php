@@ -97,8 +97,38 @@
 			<path d="m256 512c-68.378906 0-132.667969-26.628906-181.019531-74.980469-48.351563-48.351562-74.980469-112.640625-74.980469-181.019531s26.628906-132.667969 74.980469-181.019531c48.351562-48.351563 112.640625-74.980469 181.019531-74.980469s132.667969 26.628906 181.019531 74.980469c48.351563 48.351562 74.980469 112.640625 74.980469 181.019531s-26.628906 132.667969-74.980469 181.019531c-48.351562 48.351563-112.640625 74.980469-181.019531 74.980469zm0-472c-119.101562 0-216 96.898438-216 216s96.898438 216 216 216 216-96.898438 216-216-96.898438-216-216-216zm104.285156 216-138.285156-138.285156-28.285156 28.285156 110 110-110 110 28.285156 28.285156zm0 0"/>
 		</symbol>
 
+		
+		<symbol id="letter" viewBox="0 0 496 496">		
+			<path d="M472,104H24c-13.255,0-24,10.745-24,24v240c0,13.255,10.745,24,24,24h448c13.255,0,24-10.745,24-24V128
+				C496,114.745,485.255,104,472,104z M480,368c0,4.418-3.582,8-8,8H24c-4.418,0-8-3.582-8-8V158.128l227.88,136.728
+				c2.535,1.523,5.705,1.523,8.24,0L480,158.128V368z M480,139.472l-232,139.2l-232-139.2V128c0-4.418,3.582-8,8-8h448
+				c4.418,0,8,3.582,8,8V139.472z"/>
+			<path d="M432,352h16c4.418,0,8-3.582,8-8v-32c0-4.418-3.582-8-8-8s-8,3.582-8,8v24h-8c-4.418,0-8,3.582-8,8S427.582,352,432,352z
+				"/>
+			<path d="M384,352h16c4.418,0,8-3.582,8-8s-3.582-8-8-8h-16c-4.418,0-8,3.582-8,8S379.582,352,384,352z"/>
+		</symbol>
+
 
 	</svg>
+
+	<div class="popup__overlay">
+			<span class="popup__close"><span></span></span>
+		  <div class="popup">
+		  <?php echo do_shortcode('[contact-form-7 id="50" title="Контактная форма 1"]')?>
+			<!-- <h1>
+				Появились вопросы?
+				Задайте их профессионалу
+			</h1>
+			<form action="">
+				<input type="text" placeholder="Имя*" required>
+				<input type="email" placeholder="Email*" required>
+				<input type="text" placeholder="Тема">
+				<input type="text" placeholder="Статья">
+				<textarea placeholder="Ваше сообщение" id="textArea-connect" rows="1"></textarea>
+				<button type="submit">Отправить</button>
+			</form> -->
+		</div>
+	  </div>
 		
 	</footer><!-- #colophon -->
 </div><!-- #page -->
@@ -106,6 +136,7 @@
 <?php wp_footer(); ?>
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<!-- <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=true"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 <script>
