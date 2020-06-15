@@ -16,38 +16,64 @@
 			<div class="footer-top wow animate__fadeInUp" data-wow-duration="1s">
 				<div class="footer-list flex_col--1-1 flex_col-desk--1-3">	
 					<span class="footer-list-main" href="#">OFERTY DEDYKOWANE</span>
-					<ul class="footer-list-links">			
-						<li><a href="">Dla Domu</a></li>
-						<li><a href="">Dla Biznesu</a></li>
-						<li><a href="">Dla Rolnika</a></li>
-						<li><a href="">Farmy PV</a></li>
-						<li><a href="">GoBloo</a></li>
-					</ul>
+			
+
+					<?php 
+						wp_nav_menu( [
+							'theme_location'  => '',
+							'menu'            => 'general_menu', 
+							'container'       => 'ul', 
+							'container_class' => '', 
+							'container_id'    => '',
+							'menu_class'      => 'footer-list-links', 
+							'menu_id'         => '',
+							'echo'            => true,
+							'fallback_cb'     => 'wp_page_menu',
+							'before'          => '',
+							'after'           => '',
+							'link_before'     => '',
+							'link_after'      => '',
+							'depth'           => 0,
+							'walker'          => '',
+						] );
+					?>
+
+
+
 				</div>
 				<div class="footer-list flex_col--1-1 flex_col-desk--1-3">					
 					<span class="footer-list-main" href="#">INFORMACJE</span>
-					<ul class="footer-list-links">			
-						<li><a href="">O firmie</a></li>
-						<li><a href="">Kariera</a></li>
-						<li><a href="">FAQ – porady</a></li>
-						<li><a href="">Blog</a></li>
-						<li><a href="">Dokumenty do pobrania</a></li>
-						<li><a href="">Polityka Prywatności</a></li>
-					</ul>
+					<?php 
+						wp_nav_menu( [
+							'theme_location'  => '',
+							'menu'            => 'footer_infopage', 
+							'container'       => 'ul', 
+							'container_class' => '', 
+							'container_id'    => '',
+							'menu_class'      => 'footer-list-links', 
+							'menu_id'         => '',
+							'echo'            => true,
+							'fallback_cb'     => 'wp_page_menu',
+							'before'          => '',
+							'after'           => '',
+							'link_before'     => '',
+							'link_after'      => '',
+							'depth'           => 0,
+							'walker'          => '',
+						] );
+					?>
 				</div>
 				<div class="footer-list flex_col--1-1 flex_col-desk--1-3">				
 					<span class="footer-list-main" href="#">BIURO OBSŁUGI KLIENTA</span>
 					<ul class="footer-list-links">			
-						<li><a href="">tel. 12 307 30 96</a></li>
-						<li><a href="">BOK dostępne w godzinach 8:00-18:00.</a></li>
-						<li><a href="">tel. 12 307 30 90</a></li>
-						<li><a href="">fax. 12 311 33 13</a></li>
-						<li><a href="">bok@columbusenergy.pl</a></li>
+						<li><a href="tel:<?php the_field('nomer_telefona', 210);?>">tel. <?php the_field('nomer_telefona', 210);?></a></li>
+						<li><a><?php the_field('rezhim_raboty', 210);?></a></li>
+						<li><a href="mailto:<?php the_field('pochta', 210);?>"><?php the_field('pochta', 210);?></a></li>
 					</ul>
 				</div>
 			</div>
 			<div class="footer-bottom wow animate__fadeInRight" data-wow-duration="1s">
-				<p>Columbus Energy S.A. - lider rynku fotowoltaiki w Polsce</p>
+				<p>FG Energy - lider rynku fotowoltaiki w Polsce</p>
 				<a class="footer-logo" href="#">
 					<img src="/wp-content/themes/poland/images/logo-footer.svg" alt="">
 				</a>
@@ -106,6 +132,14 @@
 			<path d="M432,352h16c4.418,0,8-3.582,8-8v-32c0-4.418-3.582-8-8-8s-8,3.582-8,8v24h-8c-4.418,0-8,3.582-8,8S427.582,352,432,352z
 				"/>
 			<path d="M384,352h16c4.418,0,8-3.582,8-8s-3.582-8-8-8h-16c-4.418,0-8,3.582-8,8S379.582,352,384,352z"/>
+		</symbol>
+
+		<symbol id="solar" viewBox="0 0 512.025 512.025">		
+			<path d="m496.013 440.012h-104v-16c0-26.467-21.533-48-48-48h-40v-72h192c11.189 0 18.926-11.217 14.96-21.674l-88-232c-2.357-6.215-8.313-10.326-14.96-10.326h-304c-6.647 0-12.603 4.11-14.96 10.326l-88 232c-3.968 10.462 3.775 21.674 14.96 21.674h192v72h-40c-26.467 0-48 21.533-48 48v16h-104c-8.836 0-16 7.164-16 16s7.164 16 16 16h480c8.836 0 16-7.164 16-16s-7.164-16-16-16zm-301.642-168 7.724-56h107.835l7.724 56c-13.506 0-109.975 0-123.283 0zm-103.591-136h90.046l-6.621 48h-101.632zm122.35 0h85.766l6.621 48h-99.007zm76.938-64 4.414 32h-76.938l4.414-32zm149.384 112h-101.633l-6.621-48h90.046zm-89.495 88-7.724-56h109.357l21.241 56zm59.15-168h-82.322l-4.414-32h74.598zm-294.051-32h74.598l-4.414 32h-82.322zm-54.621 144h109.357l-7.724 56h-122.874zm179.578 88h32v72h-32zm-88 136v-16c0-8.822 7.178-16 16-16h176c8.822 0 16 7.178 16 16v16z"/>
+		</symbol>
+
+		<symbol id="house" viewBox="0 0 512 512">		
+			<path d="m426 495.983h-340c-25.364 0-46-20.635-46-46v-242.02c0-8.836 7.163-16 16-16s16 7.164 16 16v242.02c0 7.72 6.28 14 14 14h340c7.72 0 14-6.28 14-14v-242.02c0-8.836 7.163-16 16-16s16 7.164 16 16v242.02c0 25.364-20.635 46-46 46z"/><path d="m496 263.958c-4.095 0-8.189-1.562-11.313-4.687l-198.989-198.987c-16.375-16.376-43.02-16.376-59.396 0l-198.988 198.988c-6.248 6.249-16.379 6.249-22.627 0-6.249-6.248-6.249-16.379 0-22.627l198.988-198.989c28.852-28.852 75.799-28.852 104.65 0l198.988 198.988c6.249 6.249 6.249 16.379 0 22.627-3.123 3.125-7.218 4.687-11.313 4.687z"/><path d="m320 495.983h-128c-8.837 0-16-7.164-16-16v-142c0-27.57 22.43-50 50-50h60c27.57 0 50 22.43 50 50v142c0 8.836-7.163 16-16 16zm-112-32h96v-126c0-9.925-8.075-18-18-18h-60c-9.925 0-18 8.075-18 18z"/>
 		</symbol>
 
 
